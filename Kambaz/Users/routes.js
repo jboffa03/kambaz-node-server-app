@@ -55,7 +55,11 @@ export default function UserRoutes(app, db) {
     res.sendStatus(200);
   };
   const profile = async (req, res) => {
-    res.json(currentUser);
+    const currentUser = req.session.currentUser;
+  if (!currentUser) {
+    return res.sendStatus(401); 
+  }
+  res.json(currentUser);
   };
 
 

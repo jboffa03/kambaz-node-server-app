@@ -10,6 +10,9 @@ import UserRoutes from "./Kambaz/Users/routes.js";
 import "dotenv/config";
 import session from "express-session";
 import CourseRoutes from './Kambaz/Courses/route.js';
+import ModulesRoutes from './Kambaz/Modules/route.js';
+import AssignmentRoute from './Kambaz/Assignments/route.js';
+import EnrollmentsRoute from './Kambaz/Enrollments/routes.js';
 
 
 
@@ -41,4 +44,7 @@ QueryParameters(app);
 WorkingWithObjects(app);
 UserRoutes(app, db);
 CourseRoutes(app, db);
+ModulesRoutes(app, db);
+AssignmentRoute(app, db);
+EnrollmentsRoute(app, db);
 app.listen(process.env.PORT || 4000)
