@@ -10,7 +10,7 @@ export default function AssignmentRoute(app, db) {
   }
   const createAssignmentForCourse = (req, res) => {
     const { courseId } = req.params;
-    const assignment = {...req.body,course: courseId,};
+    const assignment = {...req.body, course: courseId,};
     const newAssignment = dao.createAssignment(assignment);
     res.send(newAssignment);
   }

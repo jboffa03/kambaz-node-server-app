@@ -13,6 +13,8 @@ import CourseRoutes from './Kambaz/Courses/route.js';
 import ModulesRoutes from './Kambaz/Modules/route.js';
 import AssignmentRoute from './Kambaz/Assignments/route.js';
 import EnrollmentsRoute from './Kambaz/Enrollments/routes.js';
+import QuizRoute from './Kambaz/Quizzes/route.js';
+import QuestionRoute from './Kambaz/Questions/routes.js';
 
 
 
@@ -47,4 +49,6 @@ CourseRoutes(app, db);
 ModulesRoutes(app, db);
 AssignmentRoute(app, db);
 EnrollmentsRoute(app, db);
+QuizRoute(app, db);
+QuestionRoute(app, db);
 app.listen(process.env.PORT || 4000)
