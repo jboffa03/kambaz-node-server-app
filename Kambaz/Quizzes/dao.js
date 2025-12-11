@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function QuizDao(db) {
 
-  function findQuiz(quizId) {
+  function fetchQuiz(quizId) {
    const { quizzes } = db;
    return quizzes.filter((quiz) => quiz._id === quizId);
  }
@@ -31,6 +31,6 @@ export default function QuizDao(db) {
 
 
  return {
-   findQuizForCourse, createQuiz, deleteQuiz, updateQuiz
+   findQuizForCourse, createQuiz, deleteQuiz, updateQuiz, fetchQuiz
  };
 }

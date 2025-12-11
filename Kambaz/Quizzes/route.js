@@ -5,7 +5,7 @@ export default function QuizRoute(app, db) {
 
   const fetchQuiz = (req, res) => {
     const { quizId } = req.params;
-    const quizzes = dao.fetchQuiz(courseId);
+    const quizzes = dao.fetchQuiz(quizId);
     res.json(quizzes);
   }
 
