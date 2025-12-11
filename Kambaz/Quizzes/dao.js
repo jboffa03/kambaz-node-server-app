@@ -1,6 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export default function QuizDao(db) {
+
+  function findQuiz(quizId) {
+   const { quizzes } = db;
+   return quizzes.filter((quiz) => quiz._id === quizId);
+ }
+
   function createQuiz(quiz) {
     const newQuiz = { ...quiz, _id: uuidv4() };
     db.quizzes = [...db.quizzes, newQuiz];

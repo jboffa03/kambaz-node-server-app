@@ -5,7 +5,7 @@ export default function QuestionDao(db) {
     
   function createQuestion(question) {
     const newQuiz = { ...question, _id: uuidv4() };
-    db.quizzes = [...db.quizzes, newQuiz];
+    db.questions = [...db.questions, newQuiz];
     return newQuiz;
   }
 
@@ -18,7 +18,7 @@ export default function QuestionDao(db) {
     const { questions } = db;
     const question = questions.find((question) => question._id === questionId);
     Object.assign(question, questionUpdates);
-    return quiz;
+    return question;
 }
 
 

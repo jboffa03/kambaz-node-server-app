@@ -3,6 +3,12 @@ import QuizDao from "./dao.js";
 export default function QuizRoute(app, db) {
   const dao = QuizDao(db);
 
+  const fetchQuiz = (req, res) => {
+    const { quizId } = req.params;
+    const quizzes = dao.fetchQuiz(courseId);
+    res.json(quizzes);
+  }
+
   const findQuizForCourse = (req, res) => {
     const { courseId } = req.params;
     const quizzes = dao.findQuizForCourse(courseId);
@@ -31,6 +37,7 @@ export default function QuizRoute(app, db) {
 
   app.post("/api/courses/:courseId/quizzes", createQuiz);
 
+  app.get("/api/quizzes/:quizId", fetchQuiz);
   app.get("/api/courses/:courseId/quizzes", findQuizForCourse);
 }
 
