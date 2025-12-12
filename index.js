@@ -12,7 +12,7 @@ import session from "express-session";
 import CourseRoutes from './Kambaz/Courses/route.js';
 import ModulesRoutes from './Kambaz/Modules/route.js';
 import AssignmentRoute from './Kambaz/Assignments/route.js';
-import EnrollmentsRoute from './Kambaz/Enrollments/routes.js';
+import EnrollmentsRoute from './Kambaz/Enrollments/route.js';
 import QuizRoute from './Kambaz/Quizzes/route.js';
 import QuestionRoute from './Kambaz/Questions/routes.js';
 import mongoose from "mongoose";
